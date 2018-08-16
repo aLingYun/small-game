@@ -70,7 +70,7 @@ int main()
 					case SDLK_RIGHT: person.moveRight(step); break;
 					case SDLK_LEFT: person.moveLeft(step); quitTread = true; break;
 				}
-				//SDL_WaitThread(thread,NULL);
+				/*SDL_WaitThread(thread,NULL);*/
 				SDL_RenderClear(rend);
 				person.presentImage(rend);
 				fontRect.x += step;
