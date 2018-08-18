@@ -1,5 +1,4 @@
-#include "mySDL.h"
-
+#include "../include/mySDL.h"
 
 Image::Image(char* filename,SDL_Renderer* rend)
 {

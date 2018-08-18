@@ -6,7 +6,7 @@
                 "/usr/include",
                 "/usr/local/include",
                 "/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.1/include",
-                "${workspaceFolder}/**"
+                "/usr/include/linux"
             ],
             "defines": [],
             "compilerPath": "/bin/gcc",

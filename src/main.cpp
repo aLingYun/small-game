@@ -1,4 +1,4 @@
-#include "mySDL.h"
+#include "../include/mySDL.h"
 #include <iostream>
 #include <string>
 #include <SDL2/SDL_mixer.h>
@@ -25,22 +25,22 @@ static int testThread(void *ptr)
 int main()
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
-	TTF_Font* ttf = initTtf((char*)"Vera.ttf");
+	TTF_Font* ttf = initTtf((char*)"../res/Vera.ttf");
 	SDL_Window* win = SDL_CreateWindow((char*)"Game",SDL_WINDOWPOS_CENTERED,
 										SDL_WINDOWPOS_CENTERED,600,400,
 										SDL_WINDOW_SHOWN);
 	SDL_Renderer* rend = SDL_CreateRenderer(win,-1,SDL_RENDERER_ACCELERATED);
 	
 	SDL_RenderClear(rend);
-	Image person((char*)"person.jpg",rend);
+	Image person((char*)"../res/person.jpg",rend);
 	person.setImagePosition(10,10);
 	person.setImagesize(20,20);
 	person.presentImage(rend);
 	SDL_RenderPresent(rend);
 
 	Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,2,4086);
-	Mix_Music* music = Mix_LoadMUS((char*)"music.wav");
-	Mix_Chunk* chunk = Mix_LoadWAV((char*)"alert.wav");
+	Mix_Music* music = Mix_LoadMUS((char*)"../res/music.wav");
+	Mix_Chunk* chunk = Mix_LoadWAV((char*)"../res/alert.wav");
 	Mix_PlayMusic(music,1000);
 
 	bool quitTread = false;
